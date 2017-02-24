@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222170222) do
+ActiveRecord::Schema.define(version: 20170224110741) do
+
+  create_table "base_options", force: :cascade do |t|
+    t.string   "base_size"
+    t.string   "base_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "base_temperatures", force: :cascade do |t|
+    t.string   "base_temp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bases", force: :cascade do |t|
+    t.string   "base_menu"
+    t.string   "base_number"
+    t.integer  "base_price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "ingredient_name"

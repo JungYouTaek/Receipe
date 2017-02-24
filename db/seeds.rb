@@ -61,3 +61,29 @@ Ingredient.create(ingredient_name: "카라멜",
                   ingredient_number: "F2",
                   ingredient_category: "드리즐",
                   ingredient_price: 0)
+Base.create(base_menu: "라임 패션 티",
+            base_number: "1",
+            base_price: 5300)
+Base.create(base_menu: "자몽 허니 블랙 티",
+            base_number: "2",
+            base_price: 5300)
+Base.create(base_menu: "유스베리 티",
+            base_number: "3",
+            base_price: 4100)
+Base.create(base_menu: "잉글리쉬 브렉퍼스트 티",
+            base_number: "4",
+            base_price: 4100)
+Base.create(base_menu: "잉글리쉬 브렉퍼스트 티 라떼",
+            base_number: "5",
+            base_price: 5100)
+
+BaseOption.create(base_size: "short",
+                   base_price: -500)
+BaseOption.create(base_size: "tall",
+                   base_price: 0)
+BaseOption.create(base_size: "grande",
+                   base_price: 500)
+BaseOption.create(base_size: "venti",
+                   base_price: 1000)
+BaseTemperature.create(base_temp: "Ice")
+BaseTemperature.create(base_temp: "Hot")

@@ -6,7 +6,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand page-scroll" href="#page-top">Starbucks Receipe</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,7 +19,7 @@
           <a class="page-scroll" href="#services">Services</a>
         </li>
         <li>
-          <a class="page-scroll" href="#portfolio">Portfolio</a>
+          <a class="page-scroll" href="#write">레시피 작성하기</a>
         </li>
         <li>
           <a class="page-scroll" href="#about">About</a>
@@ -90,7 +90,7 @@
 <section id="write" class="bg-light-gray">
   <div class="container">
     <form action="/write" method="POST">
-      <h1>점수를 매기겠습니다.</h1>
+      <h2>나만의 레시피 작성하기</h2>
       <div class=container>
         <form action = "/write" method = "POST">
           <div class=container>
@@ -103,6 +103,13 @@
             </div>
 
             <div class="form=group">
+              <label>베이스</label>
+                  <select name="" class="selectpicker">
+                    <% @base.each do |b|%>
+                        <option><%= b.base_menu %></option>
+                        <% end %>
+                  </select>
+                  </br>
               <label>커피</label>
               <select class="selectpicker">
                 <% @ing1.each do |x| %>
@@ -144,10 +151,11 @@
                     <option><%= x.ingredient_name %></option>
                 <% end %>
               </select>
+              <p>가격 : </p>
             </div>
             </br>
             <div class=stars>
-              <label for="">별점</label>
+              <label for="">별</label>
               <select name="star_rating" id="star_rating" data-current-rating="1" display="" >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -170,3 +178,47 @@
     </form>
   </div>
 </section>
+
+<section>
+  <article class="">
+    <h3>인기있는 레시피</h3>
+    <ul class="ranking">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+    </ul>
+  </article>
+  <article class="search">
+    <!-- 모달 팝업 -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" > 검색 </button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">×</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">원하는 커피를 검색하세요</h4>
+          </div>
+          <div class="modal-body">
+            <form accept-charset="UTF-8" action="/search" method="get">
+              <input name="utf8" type="hidden" value="&#x2713;" />
+              <label for="q">Search for:</label>
+              <input id="q" name="q" type="text" />
+              <input name="commit" type="submit" value="Search" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">닫</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+<footer>
+  <p>Copyright &copy; 멋쟁이 사자처럼 강남 7팀, 2017</p>
+</footer>

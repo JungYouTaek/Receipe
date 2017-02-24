@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @base = Base.all
     @ing1 = Ingredient.where("ingredient_category = ?","커피")
     @ing2 = Ingredient.where("ingredient_category = ?","시럽")
     @ing3 = Ingredient.where("ingredient_category = ?","우유")
