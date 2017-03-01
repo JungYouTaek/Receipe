@@ -1,0 +1,2 @@
+class Customlist < ApplicationRecord
+end

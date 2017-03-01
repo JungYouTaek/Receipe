@@ -1,0 +1,100 @@
+<!-- Portfolio Grid Section -->
+<section id="write" class="bg-light-gray">
+  <div class="container">
+    <form action="/list" method="POST">
+      <h2>나만의 레시피 작성하기</h2>
+      <div class=container>
+          <div class=container>
+            <div class="form-group">
+              <img src="" alt="음료이미지">
+              <label for="input_title">글 제목</label>
+              <input name="title" type="text" class="form-control" id="title" placeholder="제목">
+              <label for="input_title">작성자</label>
+              <input name="user_name" type="text" class="form-control" placeholder="이름">
+            </div>
+
+            <div class="form=group">
+              <label>베이스</label>
+              <select name="base" class="selectpicker">
+                <option selected="selected">--</option>
+                <% @base.each do |b|%>
+                    <option value="<% b.base_category%>"><%= b.base_menu %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>커피</label>
+              <select name="coffee"class="selectpicker">
+                <option selected="selected">--</option>
+                <% @ing1.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>시럽</label>
+              <select name="syrup"class="selectpicker">
+                <option selected="selected">--</option>
+                <% @ing2.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>우유</label>
+              <select class="selectpicker">
+                <option>--</option>
+                <% @ing3.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>휘핑</label>
+              <select class="selectpicker">
+                <option selected="selected">--</option>
+                <% @ing4.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>자바칩</label>
+              <select class="selectpicker">
+                <option selected="selected">--</option>
+                <% @ing5.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              </br>
+              <label>드리즐</label>
+              <select class="selectpicker">
+                <option>--</option>
+                <% @ing6.each do |x| %>
+                    <option value="<% x.ingredient_category%>"><%= x.ingredient_name %></option>
+                <% end %>
+              </select>
+              <p>가격 : </p>
+            </div>
+            </br>
+            <div class=stars>
+              <label for="">별</label>
+              <select name="star_rating" id="star_rating" data-current-rating="1" display="" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <br>
+              <span class="title current-rating">
+              Current rating: <span class="value"></span>
+            </span>
+              <span class="title your-rating hidden">
+              Your rating: <span class="value" ></span>&nbsp;
+              <a href="#" class="clear-rating"><i class="fa fa-times-circle"></i></a>
+            </span>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!--<script>-->
+//    $('.bootstrap-select.btn-group .dropdown-toggle .filter-option').css('color','black');
+<!--</script>-->

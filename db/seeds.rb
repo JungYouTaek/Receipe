@@ -7,76 +7,76 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Ingredient.create(ingredient_name: "에스프레소샷",
                   ingredient_number: "A1",
-                  ingredient_category: "커피",
+                  ingredient_category: "coffee",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "바닐라",
                   ingredient_number: "B1",
-                  ingredient_category: "시럽",
+                  ingredient_category: "syrup",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "헤이즐넛",
                   ingredient_number: "B2",
-                  ingredient_category: "시럽",
+                  ingredient_category: "syrup",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "카라멜",
                   ingredient_number: "B3",
-                  ingredient_category: "시럽",
+                  ingredient_category: "syrup",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "일반",
                   ingredient_number: "C1",
-                  ingredient_category: "우유",
+                  ingredient_category: "milk",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "저지방",
                   ingredient_number: "C2",
-                  ingredient_category: "우유",
+                  ingredient_category: "milk",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "무지방",
                   ingredient_number: "C3",
-                  ingredient_category: "우유",
+                  ingredient_category: "milk",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "일반",
                   ingredient_number: "D1",
-                  ingredient_category: "휘핑",
+                  ingredient_category: "whipping",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "에스프레소",
                   ingredient_number: "D2",
-                  ingredient_category: "휘핑",
+                  ingredient_category: "whipping",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "자바칩",
                   ingredient_number: "E1",
-                  ingredient_category: "자바칩",
+                  ingredient_category: "javachip",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "자바칩&토핑(반반)",
                   ingredient_number: "E2",
-                  ingredient_category: "자바칩",
+                  ingredient_category: "javachip",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "통 자바칩 토핑",
                   ingredient_number: "E3",
-                  ingredient_category: "자바칩",
+                  ingredient_category: "javachip",
                   ingredient_price: 600)
 Ingredient.create(ingredient_name: "초콜릿",
                   ingredient_number: "F1",
-                  ingredient_category: "드리즐",
+                  ingredient_category: "drizzle",
                   ingredient_price: 0)
 Ingredient.create(ingredient_name: "카라멜",
                   ingredient_number: "F2",
-                  ingredient_category: "드리즐",
+                  ingredient_category: "drizzle",
                   ingredient_price: 0)
-Base.create(base_menu: "라임 패션 티",
+Base.create(base_category: "espresso",
+            base_menu: "슈 크림 라떼",
             base_number: "1",
-            base_price: 5300)
-Base.create(base_menu: "자몽 허니 블랙 티",
+            base_price: 6000)
+Base.create(base_category: "espresso",
+            base_menu: "스타벅스 카라멜 크럼블 모카",
             base_number: "2",
-            base_price: 5300)
-Base.create(base_menu: "유스베리 티",
+            base_price: 2600)
+Base.create(base_category: "frappuccino",
+            base_menu: "다크 모카 프라푸치노",
             base_number: "3",
-            base_price: 4100)
-Base.create(base_menu: "잉글리쉬 브렉퍼스트 티",
+            base_price: 6300)
+Base.create(base_category: "frappuccino",
+            base_menu: "자바 칩 프라푸치노",
             base_number: "4",
-            base_price: 4100)
-Base.create(base_menu: "잉글리쉬 브렉퍼스트 티 라떼",
-            base_number: "5",
-            base_price: 5100)
-
+            base_price: 6100)
 BaseOption.create(base_size: "short",
                    base_price: -500)
 BaseOption.create(base_size: "tall",
@@ -85,5 +85,6 @@ BaseOption.create(base_size: "grande",
                    base_price: 500)
 BaseOption.create(base_size: "venti",
                    base_price: 1000)
+
 BaseTemperature.create(base_temp: "Ice")
 BaseTemperature.create(base_temp: "Hot")
